@@ -5,6 +5,19 @@
   <groupId>io.jupitermeta</groupId>
   <artifactId>Isckon_App</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+	
+	<name>mobilespaarks</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	
+  		 
+  	 	 <maven.compiler.source>11</maven.compiler.source>
+   	 	<maven.compiler.target>11</maven.compiler.target>
+ 	</properties>
+
+	
 
 <dependencies>
 <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
@@ -14,6 +27,23 @@
             <version>7.5.1</version>
         </dependency>
         
+        
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.5.3</version>
+</dependency>
+
+	
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+		
        
             <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 	<dependency>
@@ -54,5 +84,25 @@
      	<artifactId>mobilespaarks</artifactId>
      	<version>0.0.1-SNAPSHOT</version>
      </dependency>
-</dependencies>      
+</dependencies>
+
+		<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M5</version>
+            <configuration>
+                <systemPropertyVariables>
+                    <environment>development</environment> <!-- Set your system property here -->
+                </systemPropertyVariables>
+            </configuration>
+        </plugin>
+    </plugins>
+
+
+
+	</build>
+
+      
 </project>
