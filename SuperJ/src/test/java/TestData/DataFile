@@ -1,0 +1,12 @@
+#Setup
+automationName=UiAutomator2
+platformName=android
+deviceName=ad74c42f
+appPackage=com.osos.spaarksapp
+appActivity=com.osos.spaarksapp.MainActivity
+noReset=true
+
+#Login
+MoBilenumber=6281674691
+Randommobilenumber=6785
+randomText=temp
